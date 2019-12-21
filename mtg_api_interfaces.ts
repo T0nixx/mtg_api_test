@@ -11,6 +11,7 @@ export interface MTG_API_Cards_Parameters {
   setName?: string;
   set?: string;
   page?: number;
+  gameFormat?: string;
 }
 
 export interface MTG_API_Sets_Parameters {
@@ -20,6 +21,10 @@ export interface MTG_API_Sets_Parameters {
 
 export interface MTG_API_Sets_Response {
   sets: { code: string; name: string }[];
+}
+export interface Name_Pair {
+  en_name: string;
+  ko_name: string;
 }
 
 export type MTG_API_Method = "cards" | "sets";
